@@ -6,7 +6,7 @@ public class Customer {
 	String phone;
 	String email;
 	String password;
-	String lid;
+	
 	
 	
 	public String getCid() {
@@ -39,12 +39,8 @@ public class Customer {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getLid() {
-		return lid;
-	}
-	public void setLid(String lid) {
-		this.lid = lid;
-	}
+	
+	
 	
 	
 }

@@ -67,7 +67,7 @@ public class Registration {
 
             rs = st.executeQuery("select * from customer where email='" + email + "' and password='" + pass + "';");
             boolean b = rs.next();
-            if (b == true) {{
+            if (b == true) {
                 id = rs.getString("slno");
                 name = rs.getString("name");
                 emails = rs.getString("email");
@@ -75,7 +75,7 @@ public class Registration {
                 se.setAttribute("email", emails);
                 se.setAttribute("id", id);
                 status1 = "success";
-            }} else {
+            } else {
                 status1 = "failure";
             }
         } catch (Exception e) {

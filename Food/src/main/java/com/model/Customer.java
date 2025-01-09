@@ -1,11 +1,11 @@
 package com.model;
 
 public class Customer {
-	String cid;
-	String name;
-	String phone;
-	String email;
-	String password;
+	private String cid;
+	private String name;
+	private String phone;
+	private String email;
+	private String password;
 	
 	
 	

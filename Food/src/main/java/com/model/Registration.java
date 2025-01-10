@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 import jakarta.servlet.http.HttpSession;
@@ -83,5 +84,27 @@ public class Registration {
         }
 
         return status1;
+    }
+    public String updateUser(String name, String pno, String pass) {
+    	String status="";
+    	PreparedStatement ps=null;
+    	String query="Update customer set name='"+name+"',phone='"+pno+"',password='"+pass+"'where cid='"+se.getAttribute("id")+"';'";
+    	try {
+    		ps=con.prepareStatement(query);
+			int res=ps.executeUpdate();
+			se.setAttribute("uname", name);
+			if(res>0) {
+				status="success";
+			}
+			else {
+	    		status="failure";
+	    	}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	return status;
+    	
     }
 }

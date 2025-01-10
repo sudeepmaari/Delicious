@@ -61,7 +61,7 @@
 <body>
     <div class="custom">
         <h1>Register</h1>
-        <form action="#" method="#" id="valid">
+        <form action="register" method="POST" id="valid">
             <div class="mb-3 mt-3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name">

@@ -17,7 +17,7 @@ public class Registration {
         try {
 
             Class.forName("com.mysql.cj.jdbc.Driver"); // load the drivers
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/delicious", "root", "tiger");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/delicious", "root", "Aasha@1107");
             // connection with data base
             se = session;
         } catch (Exception e) {
@@ -37,7 +37,7 @@ public class Registration {
             if (b) {
                 status = "existed";
             } else {
-                ps = (PreparedStatement) con.prepareStatement("insert into customer values(0,?,?,?,?)");
+                ps = (PreparedStatement) con.prepareStatement("insert into customer values(0,?,?,?,?);");
                 ps.setString(1, name);
                 ps.setString(2, phone);
                 ps.setString(3, email);

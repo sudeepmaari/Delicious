@@ -61,7 +61,7 @@
 <body>
     <div class="custom">
         <h1>Login</h1>
-        <form action="#" method="#" id="valid">
+        <form action="Login" method="POST" id="valid">
             <div class="mb-3">
                 <label for="em" class="form-label">Email</label>
                 <input type="email" class="form-control" id="em" name="email" placeholder="Enter Your Email">
